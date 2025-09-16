@@ -1,0 +1,138 @@
+/* Add any custom styles here if needed */
+:root {
+  --card-bg: #1B1537;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --primary: #EA3A70;
+}
+
+.blog-page {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+}
+
+.blog-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.blog-card {
+  @apply bg-[#1B1537] rounded-xl overflow-hidden transition-all duration-200;
+}
+
+.blog-card:hover {
+  @apply transform scale-[1.02];
+}
+
+.blog-image {
+  @apply w-full h-48 object-cover;
+}
+
+.blog-content {
+  @apply p-6;
+}
+
+/* Blog content styling */
+.blog-content {
+  color: white;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.blog-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.blog-content h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.blog-content p {
+  margin-bottom: 1rem;
+  color: #e5e7eb;
+  line-height: 1.8;
+}
+
+.blog-content ul, .blog-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+}
+
+.blog-content strong, .blog-content b {
+  font-weight: bold;
+  color: white;
+}
+
+.blog-content em, .blog-content i {
+  font-style: italic;
+  color: #d1d5db;
+}
+
+.blog-content a {
+  color: #EA3A70;
+  text-decoration: underline;
+}
+
+.blog-content a:hover {
+  color: #EA3A70;
+  opacity: 0.8;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #EA3A70;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #d1d5db;
+}
+
+.blog-content code {
+  background-color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  color: #f3f4f6;
+}
+
+.blog-content pre {
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.blog-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.blog-meta {
+  @apply flex items-center text-sm text-gray-400 mb-3;
+}
+
+.blog-title {
+  @apply text-xl font-semibold text-white mb-4;
+}
+
+.blog-link {
+  @apply flex items-center text-[#EA3A70] text-sm font-medium;
+}
