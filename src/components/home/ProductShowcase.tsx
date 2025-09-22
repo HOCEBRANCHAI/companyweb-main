@@ -1,4 +1,4 @@
-import React, { useState, Children } from 'react';
+import { useState } from 'react';
 import { GlobeIcon, CheckIcon, ArrowRightIcon, BarChart2Icon, ShieldCheckIcon, BuildingIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -31,21 +31,21 @@ const itemVariants = {
 export function ProductShowcase() {
   const [activeProduct, setActiveProduct] = useState(0);
   const products = [{
-    title: 'Global Business Formation',
-    description: 'Streamlined company registration across all 27 EU countries',
+    title: 'Company Registration',
+    description: 'Register your company in any of the 27 EU countries',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-    features: ['48-hour company setup', 'All legal paperwork handled', 'Multi-jurisdiction support', 'Digital registration process'],
+    features: ['48-hour company setup', 'All legal paperwork handled', 'Support in all EU countries', 'Online registration process'],
     stats: {
-      companies: '1,200+',
+      companies: '15+',
       countries: '27',
-      satisfaction: '99%'
+      satisfaction: '90%'
     },
     icon: BuildingIcon
   }, {
-    title: 'Corporate Banking Solutions',
-    description: 'Comprehensive banking setup and management for international businesses',
+    title: 'Business Banking',
+    description: 'Banking setup and management for European businesses',
     image: 'https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-    features: ['Multi-currency accounts', 'Global payment solutions', 'Corporate credit cards', 'Digital banking platform'],
+    features: ['Multi-currency accounts', 'International payments', 'Business credit cards', 'Online banking platform'],
     stats: {
       transactions: '€500M+',
       banks: '15+',
@@ -53,10 +53,10 @@ export function ProductShowcase() {
     },
     icon: BarChart2Icon
   }, {
-    title: 'Compliance & Legal Services',
-    description: 'End-to-end compliance management and legal support',
+    title: 'Legal & Compliance',
+    description: 'Legal support and compliance management',
     image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
-    features: ['Automated compliance monitoring', 'Legal document management', 'Regulatory updates', 'Expert legal support'],
+    features: ['Compliance monitoring', 'Legal document management', 'Regulatory updates', 'Legal support'],
     stats: {
       compliance: '100%',
       documents: '10,000+',
@@ -76,11 +76,10 @@ export function ProductShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div className="text-center mb-8 sm:mb-12" variants={itemVariants}>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
-            Enterprise-Grade Business Solutions
+            Business Services
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive services powering your international business
-            expansion
+            Complete services for starting and running your business in Europe
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">

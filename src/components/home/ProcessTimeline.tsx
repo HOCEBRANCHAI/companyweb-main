@@ -32,48 +32,48 @@ export function ProcessTimeline() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [hoveredStep, setHoveredStep] = useState<number | null>(null);
   const steps = [{
-    title: 'Strategic Planning',
-    description: 'Comprehensive market analysis and entry strategy',
+    title: 'Planning',
+    description: 'Market analysis and business planning',
     time: '1-2 days',
     icon: BookOpenIcon,
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: ['Market opportunity assessment', 'Regulatory requirement analysis', 'Cost structure planning', 'Growth strategy development'],
+    details: ['Market analysis', 'Legal requirements review', 'Cost planning', 'Business strategy'],
     metrics: {
       success: '98%',
       timeframe: '24h',
       support: '24/7'
     }
   }, {
-    title: 'Legal Formation',
-    description: 'Company registration and compliance setup',
+    title: 'Registration',
+    description: 'Company registration and legal setup',
     time: '2-3 days',
     icon: BuildingIcon,
     image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: ['Entity structure optimization', 'Registration documentation', 'Regulatory compliance setup', 'Legal framework establishment'],
+    details: ['Company structure setup', 'Registration documents', 'Legal compliance setup', 'Legal framework setup'],
     metrics: {
       success: '100%',
       timeframe: '48h',
       support: 'Local'
     }
   }, {
-    title: 'Financial Setup',
-    description: 'Banking and financial infrastructure',
+    title: 'Banking',
+    description: 'Business banking and financial setup',
     time: '3-4 days',
     icon: BoxIcon,
     image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: ['Business account setup', 'Payment infrastructure', 'Tax registration', 'Financial compliance'],
+    details: ['Business account setup', 'Payment systems', 'Tax registration', 'Financial compliance'],
     metrics: {
       success: '96%',
       timeframe: '72h',
       support: 'Expert'
     }
   }, {
-    title: 'Operational Launch',
-    description: 'Full business activation and growth support',
+    title: 'Launch',
+    description: 'Business launch and ongoing support',
     time: '1-2 days',
     icon: GlobeIcon,
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    details: ['Systems integration', 'Team onboarding', 'Vendor setup', 'Growth acceleration'],
+    details: ['System setup', 'Team setup', 'Vendor setup', 'Business support'],
     metrics: {
       success: '95%',
       timeframe: '24h',
@@ -95,14 +95,14 @@ export function ProcessTimeline() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#EA3A70]/10 border border-[#EA3A70]/20 mb-4 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
             <GlobeIcon className="h-4 w-4 text-[#EA3A70] mr-2" />
             <span className="text-[#EA3A70] font-medium">
-              Global Expansion Process
+              How It Works
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Expand Your Business Beyond Borders
+            Start Your Business in Europe
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We simplify registration, compliance, and financial setup so you can focus on growth.
+            We handle registration, compliance, and banking so you can focus on your business.
           </p>
         </motion.div>
         {/* Horizontal Timeline */}
@@ -243,7 +243,7 @@ export function ProcessTimeline() {
             to="/pricing"
             className="inline-flex items-center px-8 py-4 bg-[#EA3A70] text-white rounded-xl hover:bg-[#EA3A70]/90 transition-all duration-300 font-medium shadow-lg shadow-[#EA3A70]/20 transform hover:scale-105 group"
           >
-            Begin Your Global Journey
+            Get Started
             <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>

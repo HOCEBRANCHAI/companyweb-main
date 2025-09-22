@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Children } from 'react';
+import { useEffect, useState } from 'react';
 import { StarIcon, QuoteIcon, BuildingIcon, GlobeIcon, BarChart2Icon, ChevronRightIcon, ChevronLeftIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 const containerVariants = {
@@ -35,7 +35,7 @@ export function TrustSection() {
     company: 'TechGrowth Solutions',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
     companyLogo: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
-    quote: 'House of Companies transformed our European expansion journey. Their AI-powered platform and expert support made complex processes seamless.',
+    quote: 'House of Companies made setting up our European business straightforward. Their platform and support team handled everything we needed.',
     rating: 5,
     location: 'Singapore',
     expanded: 'United Kingdom, Netherlands, Germany'
@@ -45,7 +45,7 @@ export function TrustSection() {
     company: 'GlobalTrade Inc',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
     companyLogo: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
-    quote: 'The level of automation and efficiency in their platform is unmatched. We successfully established operations in 3 EU countries within weeks.',
+    quote: 'Their platform is efficient and easy to use. We set up operations in 3 EU countries within weeks.',
     rating: 5,
     location: 'United States',
     expanded: 'France, Spain, Italy'
@@ -55,13 +55,13 @@ export function TrustSection() {
     company: 'EuroTech Ventures',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
     companyLogo: 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80',
-    quote: 'Their compliance management system gives us peace of mind. Real-time monitoring and proactive updates keep us ahead of regulatory changes.',
+    quote: 'Their compliance system keeps us updated on regulatory changes. We feel confident our business stays compliant.',
     rating: 5,
     location: 'Australia',
     expanded: 'Ireland, Belgium, Luxembourg'
   }];
   const stats = [{
-    number: '1,200+',
+    number: '15+',
     label: 'Companies Served',
     icon: BuildingIcon
   }, {
@@ -69,7 +69,7 @@ export function TrustSection() {
     label: 'EU Countries',
     icon: GlobeIcon
   }, {
-    number: '€500M+',
+    number: '€5M+',
     label: 'Transactions Processed',
     icon: BarChart2Icon
   }];
@@ -100,11 +100,10 @@ export function TrustSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div className="text-center mb-12 animate-slide-up" variants={itemVariants}>
           <h2 className="text-3xl font-bold text-white mb-4">
-            Trusted by Global Business Leaders
+            What Our Clients Say
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Join thousands of companies who trust us with their international
-            expansion
+            See how we've helped businesses start and grow in Europe
           </p>
         </motion.div>
         {/* Stats Section - Enhanced with animations */}

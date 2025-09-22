@@ -49,7 +49,7 @@ export function NewHero() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const stats = [{
-    number: '1,200+',
+    number: '15+',
     label: 'Companies Served'
   }, {
     number: '27',
@@ -58,26 +58,26 @@ export function NewHero() {
     number: '48h',
     label: 'Average Setup Time'
   }, {
-    number: '99%',
+    number: '90%',
     label: 'Success Rate'
   }];
   const goals = [{
     id: 'incorporate',
     label: 'Incorporate a New Company',
     icon: BuildingIcon,
-    description: 'Set up your business entity in any EU country within 48 hours',
+    description: 'Register your company in any EU country within 48 hours',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
   }, {
     id: 'banking',
     label: 'Open a Business Bank Account',
     icon: BoxIcon,
-    description: 'Get your European business bank account with multi-currency support',
+    description: 'Open a European business bank account with multi-currency support',
     image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
   }, {
     id: 'compliance',
     label: 'Handle Tax & Compliance',
     icon: FileTextIcon,
-    description: 'Stay compliant with automated tax filing and regulatory support',
+    description: 'Handle tax filing and regulatory requirements',
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
   }];
   // Auto-rotate featured stats
@@ -99,12 +99,11 @@ export function NewHero() {
           <motion.div className="relative z-10" variants={containerVariants}>
           
             <motion.h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight" variants={itemVariants}>
-              Launch Your Global Business
-              <span className="text-[#EA3A70]"> Without Borders</span>
+            Start Your Company in Europe
+              <span className="text-[#EA3A70]"> Simply</span>
             </motion.h1>
             <motion.p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8" variants={itemVariants}>
-              One platform to incorporate, manage, and scale your business
-              across Europe. Get started in minutes, not months.
+            We handle company registration, banking, and legal requirements so you can focus on your business.
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12" variants={itemVariants}>
               <button 
@@ -139,7 +138,7 @@ export function NewHero() {
             <div className="flex items-center mb-4 sm:mb-6">
               <GlobeIcon className="h-5 w-5 sm:h-6 sm:w-6 text-[#EA3A70] mr-2 sm:mr-3" />
               <h2 className="text-lg sm:text-xl font-medium text-white">
-                Start Your Global Journey
+                What do you need help with?
               </h2>
             </div>
             <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">

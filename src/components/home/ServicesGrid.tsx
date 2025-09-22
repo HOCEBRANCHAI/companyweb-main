@@ -47,22 +47,22 @@ export function ServicesGrid() {
   const services = [{
     icon: BuildingIcon,
     title: 'Company Formation',
-    description: 'Quick and compliant company registration across Europe',
+    description: 'Company registration across Europe',
     link: '/services/company-formation'
   }, {
     icon: BoxIcon,
     title: 'Banking Services',
-    description: 'Business account setup and financial solutions',
+    description: 'Business account setup and banking',
     link: '/services/banking'
   }, {
     icon: ScaleIcon,
     title: 'Legal Services',
-    description: 'Comprehensive legal support and compliance',
+    description: 'Legal support and compliance',
     link: '/services/legal'
   }, {
     icon: FileTextIcon,
     title: 'Tax & Accounting',
-    description: 'Full-service accounting and tax management',
+    description: 'Accounting and tax management',
     link: '/services/accounting'
   }];
   return <motion.section className="py-20 bg-[#0F0B1F]" initial="hidden" whileInView="visible" viewport={{
@@ -73,7 +73,7 @@ export function ServicesGrid() {
         <motion.div className="text-center mb-8 sm:mb-12" variants={titleVariants}>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Our Services</h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive business solutions for your global expansion
+            Business services for starting and running your company in Europe
           </p>
         </motion.div>
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8" variants={containerVariants}>
