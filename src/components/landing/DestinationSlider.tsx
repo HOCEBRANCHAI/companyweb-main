@@ -429,11 +429,17 @@ function CountryInfoPopup({ destination, onClose }: CountryInfoPopupProps) {
             <p className="text-gray-300">{destination.description}</p>
           </div>
           <div className="flex space-x-4 pt-4 border-t border-[#2D2755]">
-            <button className="flex-1 bg-[#EA3A70] text-white py-3 rounded-lg font-medium hover:bg-[#EA3A70]/90 transition-colors flex items-center justify-center">
+            <button 
+              onClick={() => window.open('https://clientdashboard2.houseofcompanies.co.in/', '_blank')}
+              className="flex-1 bg-[#EA3A70] text-white py-3 rounded-lg font-medium hover:bg-[#EA3A70]/90 transition-colors flex items-center justify-center"
+            >
               <BuildingIcon className="h-4 w-4 mr-2" />
               Start Registration
             </button>
-            <button className="flex-1 border border-[#EA3A70] text-[#EA3A70] py-3 rounded-lg font-medium hover:bg-[#EA3A70]/10 transition-colors flex items-center justify-center">
+            <button 
+              onClick={() => window.open('https://clientdashboard2.houseofcompanies.co.in/', '_blank')}
+              className="flex-1 border border-[#EA3A70] text-[#EA3A70] py-3 rounded-lg font-medium hover:bg-[#EA3A70]/10 transition-colors flex items-center justify-center"
+            >
               <GlobeIcon className="h-4 w-4 mr-2" />
               Explore Market
             </button>

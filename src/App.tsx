@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect, Fragment } from 'react'
+import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { ServiceTemplate } from './pages/ServiceTemplate'
@@ -23,7 +23,6 @@ import { PaymentPage } from './components/PaymentPage'
 import { PaymentSuccess } from './pages/PaymentSuccess'
 import { PaymentCancelled } from './pages/PaymentCancelled'
 import { PaymentTest } from './pages/PaymentTest'
-import { ChatbotWidget } from './components/ChatbotWidget'
 import { AboutUs } from './pages/AboutUs'
 import {SurveyForm} from './components/SurveyForm'
 import { NetherlandsProductPage } from './components/expansion/NetherlandsProductPage'
@@ -31,6 +30,8 @@ import { FranceProductPage } from './components/expansion/FranceProductPage'
 import { GermanyProductPage } from './components/expansion/GermanyProductPage'
 import { CountryPage } from './components/countryyy p/CountryPage'
 import { Contact } from './pages/Contact'
+import { QuotePage } from './pages/QuotePage'
+import { FloatingChatbot } from './components/FloatingChatbot'
 import './styles/globals.css'
 
 // Redirect component for sending users to external URLs (e.g., client dashboard)
@@ -78,11 +79,13 @@ export function App() {
         <Route path="/tutorials/:country-business-financing" element={<NewTutorial />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/resources" element={<BlogPage />} />
         <Route path="/resources/knowledge-base" element={<BlogPage />} />
         <Route path="/resources/faq" element={<BlogPage />} />
         <Route path="/resources/case-studies" element={<BlogPage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/quote" element={<QuotePage />} />
         <Route path="/netherlands-business-setup" element={<NetherlandsProductPage />} />
         <Route path="/france-business-setup" element={<FranceProductPage />} />
         <Route path="/germany-business-setup" element={<GermanyProductPage />} />
@@ -96,7 +99,9 @@ export function App() {
         <Route path="/signup" element={<ExternalRedirect to="https://clientdashboard2.houseofcompanies.co.in/" />} />
         
       </Routes>
-      <ChatbotWidget />
+      
+      {/* Floating Chatbot - Available on all pages */}
+      <FloatingChatbot />
     </Router>
   )
 }

@@ -237,16 +237,6 @@ export function ProcessTimeline() {
           </div>
         </motion.div>
         
-        {/* CTA Section */}
-        <motion.div className="text-center mt-16" variants={itemVariants}>
-          <Link 
-            to="/pricing"
-            className="inline-flex items-center px-8 py-4 bg-[#EA3A70] text-white rounded-xl hover:bg-[#EA3A70]/90 transition-all duration-300 font-medium shadow-lg shadow-[#EA3A70]/20 transform hover:scale-105 group"
-          >
-            Get Started
-            <ArrowRightIcon className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
       </div>
     </motion.section>;
 }

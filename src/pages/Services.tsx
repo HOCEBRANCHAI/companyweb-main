@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BuildingIcon, SparklesIcon } from 'lucide-react';
+import { BuildingIcon, SparklesIcon, ArrowLeftIcon, HomeIcon } from 'lucide-react';
 import { BookingWidget } from '../components/landing/BookingWidget';
 import { InfoSection } from '../components/landing/InfoSection';
 import { TestimonialSection } from '../components/landing/TestimonialSection';
@@ -22,6 +22,17 @@ export function Services() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1B1537] to-[#0F0B1F]" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0F0B1F] to-transparent" />
           <div className="container mx-auto px-4 relative">
+            {/* Breadcrumb Navigation */}
+            <div className="mb-8">
+              <nav className="flex items-center space-x-2 text-sm text-gray-400">
+                <Link to="/" className="flex items-center hover:text-white transition-colors">
+                  <HomeIcon className="h-4 w-4 mr-1" />
+                  Home
+                </Link>
+                <span>/</span>
+                <span className="text-white">Services</span>
+              </nav>
+            </div>
             <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 relative">
               <div className="relative z-10">
                 <div className="flex justify-center mb-4">

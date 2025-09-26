@@ -478,9 +478,17 @@ body {
 }
 
 .plan-button.current {
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.plan-button.current:active {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .plan-button.launch {

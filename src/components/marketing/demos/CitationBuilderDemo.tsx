@@ -7,8 +7,8 @@ export function CitationBuilderDemo({
   onClose
 }: CitationBuilderDemoProps) {
   return <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-[#1B1537] rounded-xl border border-[#4A2D80]/30 max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fadeIn">
-        <div className="p-4 border-b border-[#4A2D80]/30 flex justify-between items-center">
+      <div className="bg-[#1B1537] rounded-xl border border-[#4A2D80]/30 max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fadeIn flex flex-col">
+        <div className="p-4 border-b border-[#4A2D80]/30 flex justify-between items-center flex-shrink-0">
           <div className="flex items-center">
             <MapPinIcon className="h-5 w-5 text-[#4A2D80] mr-2" />
             <h3 className="text-xl font-bold text-white">
@@ -19,7 +19,7 @@ export function CitationBuilderDemo({
             <XIcon className="h-5 w-5 text-white" />
           </button>
         </div>
-        <div className="p-6">
+        <div className="p-6 overflow-y-auto flex-1">
           <div className="bg-[#0A0826] rounded-xl p-6 mb-6 border border-[#4A2D80]/30">
             <div className="mb-6">
               <div className="relative">

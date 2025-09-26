@@ -47,15 +47,15 @@ export function EducationalSection() {
   const resources = [{
     title: 'Company Formation Guide',
     description: 'Learn about different business structures and registration processes',
-    link: '/guides/company-formation'
+    link: '/tutorials'
   }, {
     title: 'Tax Compliance',
     description: 'Understanding tax obligations for international businesses',
-    link: '/guides/tax-compliance'
+    link: '/tutorials'
   }, {
     title: 'Banking Solutions',
     description: 'Guide to international business banking and financial services',
-    link: '/guides/banking'
+    link: '/tutorials'
   }];
   return <motion.section className="py-20 bg-[#0A0826]" initial="hidden" whileInView="visible" viewport={{
     once: true,

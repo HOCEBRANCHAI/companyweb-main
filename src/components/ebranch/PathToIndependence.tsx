@@ -340,7 +340,10 @@ export function PathToIndependence() {
                 <span className="text-white">Launch in just 48 hours</span>
               </div>
             </div>
-            <button className="mt-8 px-6 py-3 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 transition-colors inline-flex items-center font-medium shadow-md shadow-[#EA3A70]/20">
+            <button 
+              onClick={() => window.open('https://clientdashboard2.houseofcompanies.co.in/', '_blank')}
+              className="mt-8 px-6 py-3 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 transition-colors inline-flex items-center font-medium shadow-md shadow-[#EA3A70]/20"
+            >
               Start Your eBranch Journey
               <ArrowRightIcon className="h-4 w-4 ml-2" />
             </button>

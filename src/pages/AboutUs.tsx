@@ -431,7 +431,10 @@ export function AboutUs() {
               managing multi-entity compliance, House of Companies is your
               strategic partner in smart expansion.
             </p>
-            <button className="px-6 sm:px-8 py-3 sm:py-4 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto font-medium text-sm sm:text-base">
+            <button 
+              onClick={() => window.open('https://clientdashboard2.houseofcompanies.co.in/', '_blank')}
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 transition-all duration-300 transform hover:scale-105 flex items-center mx-auto font-medium text-sm sm:text-base"
+            >
               Start Your Global Journey
               <ArrowRightIcon className="h-4 w-4 sm:h-5 sm:w-5 ml-2" />
             </button>

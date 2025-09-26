@@ -70,7 +70,10 @@ export function EBranchPricing() {
               <p className="text-[#EA3A70] mb-6 sm:mb-8 text-sm sm:text-base">
                 All solutions included, price locked for 5 years
               </p>
-              <button className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 transition-colors font-medium shadow-md shadow-[#EA3A70]/20 flex items-center justify-center text-sm sm:text-base">
+              <button 
+                onClick={() => window.open('https://clientdashboard2.houseofcompanies.co.in/', '_blank')}
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 transition-colors font-medium shadow-md shadow-[#EA3A70]/20 flex items-center justify-center text-sm sm:text-base"
+              >
                 Get Started
                 <ArrowRightIcon className="h-4 w-4 sm:h-5 sm:w-5 ml-2" />
               </button>

@@ -112,7 +112,7 @@ export function NewsSection() {
                 </h3>
                 <p className="text-gray-300 mb-4">{item.description}</p>
                 <Link
-                  to="/news"
+                  to="/blog"
                   className="inline-flex items-center text-[#EA3A70] hover:text-[#EA3A70]/80 transition-colors"
                 >
                   Read More
@@ -124,7 +124,7 @@ export function NewsSection() {
         </motion.div>
         <div className="text-center">
           <Link
-            to="/news"
+            to="/blog"
             className="inline-flex items-center px-6 py-3 bg-[#1B1537] text-white rounded-lg border border-[#2D2755] hover:bg-[#2D2755]/50 transition-colors"
           >
             View All News

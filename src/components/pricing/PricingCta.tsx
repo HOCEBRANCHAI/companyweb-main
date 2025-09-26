@@ -15,9 +15,12 @@ export function PricingCta() {
               global success
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/get-started" className="px-6 py-3 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 font-medium">
+              <button 
+                onClick={() => window.open('https://clientdashboard2.houseofcompanies.co.in/', '_blank')}
+                className="px-6 py-3 bg-[#EA3A70] text-white rounded-lg hover:bg-[#EA3A70]/90 font-medium"
+              >
                 Compare Plans
-              </Link>
+              </button>
               <Link to="/contact" className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 font-medium border border-white/30">
                 Contact Sales
               </Link>

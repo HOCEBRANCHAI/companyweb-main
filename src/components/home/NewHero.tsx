@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon, PlayCircleIcon, GlobeIcon, CheckCircleIcon, BuildingIcon, FileTextIcon, BoxIcon } from 'lucide-react';
 import { VideoPopup } from '../VideoPopup';
+import { ChatbotWidget } from '../ChatbotWidget';
 const containerVariants = {
   hidden: {
     opacity: 0
@@ -48,6 +49,7 @@ export function NewHero() {
   const [selectedGoal, setSelectedGoal] = useState('');
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const stats = [{
     number: '15+',
     label: 'Companies Served'
@@ -87,27 +89,26 @@ export function NewHero() {
     }, 3000);
     return () => clearInterval(timer);
   }, []);
-  return <motion.section className="relative py-12 sm:py-16 lg:py-20" initial="hidden" animate="visible" viewport={{
+  return <motion.section className="relative pb-6 sm:pb-8 lg:pb-10" initial="hidden" animate="visible" viewport={{
     once: true
   }} variants={containerVariants}>
       {/* Background overlay */}
       <div className="absolute inset-0 bg-[#0A0826]"></div>
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-1 sm:px-2 lg:px-2 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
           {/* Left Column - Enhanced with animations */}
           <motion.div className="relative z-10" variants={containerVariants}>
-          
-            <motion.h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight" variants={itemVariants}>
+            <motion.h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 sm:mb-3 leading-tight" variants={itemVariants}>
             Start Your Company in Europe
               <span className="text-[#EA3A70]"> Simply</span>
             </motion.h1>
-            <motion.p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8" variants={itemVariants}>
+            <motion.p className="text-lg sm:text-xl text-gray-300 mb-4 sm:mb-5" variants={itemVariants}>
             We handle company registration, banking, and legal requirements so you can focus on your business.
             </motion.p>
-            <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12" variants={itemVariants}>
+            <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-2 sm:mb-3" variants={itemVariants}>
               <button 
-                onClick={() => navigate('/pricing')}
+                onClick={() => navigate('/quote')}
                 className="w-full sm:w-auto px-6 py-3 bg-[#EA3A70] text-white rounded-xl hover:bg-[#EA3A70]/90 transition-colors flex items-center justify-center font-medium shadow-lg shadow-[#EA3A70]/20"
               >
                 Start Now
@@ -171,6 +172,10 @@ export function NewHero() {
       <VideoPopup 
         isOpen={isVideoOpen} 
         onClose={() => setIsVideoOpen(false)} 
+      />
+      <ChatbotWidget 
+        isOpen={isChatbotOpen} 
+        onClose={() => setIsChatbotOpen(false)} 
       />
     </motion.section>;
 }

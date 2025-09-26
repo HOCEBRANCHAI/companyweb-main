@@ -258,7 +258,7 @@ export function PricingPlans() {
                         </div>
                       </div>
                     </div>
-                    <button className="plan-button current">Current Plan</button>
+                    <button className="plan-button current">Choose Free Plan</button>
                   </motion.div>
 
                   {/* eBranch Plan */}

@@ -4,7 +4,7 @@ import { MenuIcon, XIcon, ChevronDownIcon, SearchIcon, CheckIcon } from 'lucide-
 import { countries } from '../../constants/countries';
 import logo from '../../hoclogo.png';
 import { createPortal } from 'react-dom';
-import { useClickOutside, useMultipleClickOutside } from '../../hooks/useClickOutside';
+import { useClickOutside } from '../../hooks/useClickOutside';
 
 
 // Popular countries to display in the selector
@@ -174,22 +174,17 @@ export function Header() {
   useClickOutside(mobileMenuRef, () => {
     setIsMenuOpen(false);
     setOpenDropdown(null); // Also close any open mobile dropdowns
-  }, isMenuOpen);
+  });
 
   // Close country selector when clicking outside
   useClickOutside(countrySelectorRef, () => {
     setShowCountrySelector(false);
-  }, showCountrySelector);
+  });
 
   // Close desktop dropdowns when clicking outside
   useClickOutside(desktopNavRef, () => {
     setOpenDropdown(null);
-  }, !!openDropdown);
-
-  // Close mobile dropdowns when clicking outside the mobile menu
-  const closeMobileDropdowns = () => {
-    setOpenDropdown(null);
-  };
+  });
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -234,12 +229,12 @@ export function Header() {
   // Tutorial categories removed - no longer needed for mega menu
 
   return  <header className="bg-[#0F0B1F]/80 backdrop-blur-md border-b border-[#2D2755] sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-18 lg:h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex justify-between items-center h-12 sm:h-14 lg:h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logo} alt="Logo" className="h-12 w-14 sm:h-14 sm:w-16 lg:h-17 lg:w-20" />
+              <img src={logo} alt="Logo" className="h-8 w-10 sm:h-10 sm:w-12 lg:h-12 lg:w-14" />
             </Link>
           </div>
           {/* Tablet Navigation */}
@@ -268,6 +263,16 @@ export function Header() {
           </nav>
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1" ref={desktopNavRef}>
+            <Link
+              to="/"
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                location.pathname === '/'
+                  ? 'bg-[#EA3A70]/10 text-[#EA3A70]'
+                  : 'text-white hover:bg-[#1B1537] hover:text-white'
+              }`}
+            >
+              Home
+            </Link>
             {navigationItems.map((item) => (
               item.type === 'dropdown' && item.name !== 'Resources' ? (
                 <div key={item.name} className="relative">
@@ -393,7 +398,7 @@ export function Header() {
               rel="noopener noreferrer"
               className="bg-[#EA3A70] hover:bg-[#EA3A70]/90 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-md shadow-[#EA3A70]/20"
             >
-              Start For Free
+              Login
             </a>
           </div>
           {/* Mobile menu button */}
@@ -486,7 +491,7 @@ export function Header() {
                 className="block px-3 py-2 mt-2 text-center bg-[#EA3A70] hover:bg-[#EA3A70]/90 text-white rounded-lg shadow-sm shadow-[#EA3A70]/20" 
                 onClick={() => setIsMenuOpen(false)}
               >
-                Start For Free
+                Login
               </a>
             </div>
           </div>

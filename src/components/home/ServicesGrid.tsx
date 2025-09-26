@@ -53,7 +53,7 @@ export function ServicesGrid() {
     icon: BoxIcon,
     title: 'Banking Services',
     description: 'Business account setup and banking',
-    link: '/services/banking'
+    link: '/services'
   }, {
     icon: ScaleIcon,
     title: 'Legal Services',
